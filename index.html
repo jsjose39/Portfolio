@@ -1,200 +1,485 @@
+<!-- File: index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joel Sam Jose | Cybersecurity Portfolio</title>
+  <title>Home | Joel Sam Jose</title>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: #007ACC;
-      --secondary-color: #2c3e50;
-      --background-color: #f5f7fa;
-      --text-color: #333;
-      --accent-color: #ffcc00;
-      --max-width: 1200px;
-    }
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--background-color);
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-    header {
-      background-color: var(--primary-color);
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: 700;
-    }
-    header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.1rem;
-      font-weight: 500;
-    }
-    nav {
-      background-color: var(--secondary-color);
-      padding: 1rem;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    nav li {
-      margin: 0 1rem;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      position: relative;
-    }
-    nav a::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 2px;
-      background: var(--accent-color);
-      transition: width .3s;
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-    }
-    nav a:hover::after {
-      width: 100%;
-    }
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-      color: var(--secondary-color);
-    }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .project-card {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      transition: transform .3s, box-shadow .3s;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-    .project-card h3 {
-      margin-top: 0;
-      color: var(--primary-color);
-      font-weight: 500;
-    }
-    .project-card p {
-      flex-grow: 1;
-    }
-    .project-card a.button {
-      align-self: flex-start;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: var(--accent-color);
-      color: #000;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 500;
-      transition: background .3s;
-    }
-    .project-card a.button:hover {
-      background-color: #e6b800;
-    }
-    footer {
-      background-color: var(--secondary-color);
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    @media(max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      h2 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
 </head>
 <body>
+  <!-- Sticky Navigation -->
   <header>
-    <h1>Joel Sam Jose</h1>
-    <p>Cybersecurity Analyst | Project Manager | Digital Creator</p>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="nav-logo">JSJ</a>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="resume.html" class="nav-link">Resume</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <section id="about" class="container">
-    <h2>About Me</h2>
-    <p>I'm a senior pursuing a Bachelor of Science in Information Technology with a concentration in Cybersecurity, graduating May 2025. Passionate about protecting systems and empowering communities through ethical, innovative solutions. I also bring leadership and creativity from my active involvement in youth ministry, media, and UI design.</p>
-  </section>
-  <section id="projects" class="container">
-    <h2>Featured Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>Intrusion Detection System Prototype</h3>
-        <p>Developed a prototype using Python, Wireshark, and Snort to detect and analyze suspicious network activity. Demonstrated real-time log analysis and threat identification.</p>
-        <a href="#" class="button">View GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>SAP ERP Implementation</h3>
-        <p>Led project management for a simulated SAP ERP rollout. Created a project plan with Gantt charts, stakeholder mapping, and cost projections.</p>
-        <a href="#" class="button">View Gantt Chart</a>
-      </div>
-      <div class="project-card">
-        <h3>Church App UI Design</h3>
-        <p>Designed a mobile app interface for a youth ministry with sections for prayer, news, and community engagement. Used dark-themed UI for modern appeal and readability.</p>
-        <a href="#" class="button">View Design</a>
-      </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container animate-on-scroll">
+      <h1 class="hero-title">Hi, I'm <span>Joel Sam Jose</span></h1>
+      <p class="hero-subtitle">Cybersecurity Analyst &amp; Project Manager<br>Graduating May 2025</p>
+      <a href="projects.html" class="btn">View My Work</a>
     </div>
   </section>
-  <section id="resume" class="container">
-    <h2>Resume & Certifications</h2>
-    <p>Download my resume and explore my certifications including AWS Cloud Foundations and GRC Foundations.</p>
-    <a href="#" class="button">Download Resume (PDF)</a>
-  </section>
-  <section id="contact" class="container">
-    <h2>Contact</h2>
-    <p>Email: joelsamjose@example.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/joel-sam-jose" target="_blank">joel-sam-jose</a></p>
-    <p>GitHub: <a href="https://github.com/joelsamjose" target="_blank">joelsamjose</a></p>
-  </section>
-  <footer>
-    <p>&copy; 2025 Joel Sam Jose. All rights reserved.</p>
+
+  <footer class="footer">
+    <div class="container footer-content animate-on-scroll">
+      <p>&copy; 2025 Joel Sam Jose. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
+
+
+<!-- File: about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Joel Sam Jose</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="nav-logo">JSJ</a>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="resume.html" class="nav-link">Resume</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container content animate-on-scroll">
+    <section class="about-section">
+      <div class="about-grid">
+        <div class="about-img animate-on-scroll">
+          <img src="images/profile.jpg" alt="Joel Sam Jose" class="profile-img">
+        </div>
+        <div class="about-text animate-on-scroll">
+          <h2>About Me</h2>
+          <p>I'm a senior pursuing a <strong>Bachelor of Science in IT</strong> with a concentration in Cybersecurity, graduating May 2025. I'm passionate about safeguarding systems and empowering communities with ethical, innovative solutions. Beyond cybersecurity, I lead youth ministry, produce multimedia content, and design intuitive user experiences.</p>
+          <p>My journey spans intrusion detection prototyping, SAP ERP project management, and UI/UX design—all driven by a commitment to excellence and service.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-content animate-on-scroll">
+      <p>&copy; 2025 Joel Sam Jose. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+<!-- File: projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Joel Sam Jose</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="nav-logo">JSJ</a>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="resume.html" class="nav-link">Resume</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container content animate-on-scroll">
+    <section class="projects-section">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card animate-on-scroll">
+          <h3>Intrusion Detection System Prototype</h3>
+          <p>Developed a real-time threat detection prototype using Python, Wireshark & Snort, showcasing log analysis and alerting.</p>
+          <a href="#" class="btn-small">View GitHub</a>
+        </article>
+        <article class="project-card animate-on-scroll">
+          <h3>SAP ERP Implementation</h3>
+          <p>Led full-cycle SAP ERP rollout simulation: stakeholder mapping, Gantt planning & cost analysis.</p>
+          <a href="#" class="btn-small">View Details</a>
+        </article>
+        <article class="project-card animate-on-scroll">
+          <h3>Church App UI Design</h3>
+          <p>Crafted a dark-mode mobile UI for youth ministry featuring prayer wall, news feed & community hub.</p>
+          <a href="#" class="btn-small">View Design</a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-content animate-on-scroll">
+      <p>&copy; 2025 Joel Sam Jose. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+<!-- File: resume.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Joel Sam Jose</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="nav-logo">JSJ</a>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="resume.html" class="nav-link active">Resume</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container content animate-on-scroll">
+    <section class="resume-section">
+      <h2>Resume & Certifications</h2>
+      <div class="resume-embed">
+        <iframe src="docs/Joel_Sam_Jose_Resume.pdf" frameborder="0"></iframe>
+      </div>
+      <a href="docs/Joel_Sam_Jose_Resume.pdf" class="btn">Download PDF</a>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-content animate-on-scroll">
+      <p>&copy; 2025 Joel Sam Jose. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+<!-- File: contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Joel Sam Jose</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="nav-logo">JSJ</a>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="resume.html" class="nav-link">Resume</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container content animate-on-scroll">
+    <section class="contact-section">
+      <h2>Get In Touch</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-content animate-on-scroll">
+      <p>&copy; 2025 Joel Sam Jose. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+<!-- File: css/style.css -->
+:root {
+  --clr-primary: #1E3A8A;
+  --clr-accent: #1177EE;
+  --clr-bg: #F9FAFB;
+  --clr-text: #1F2937;
+  --clr-muted: #6B7280;
+  --max-width: 1200px;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.6;
+}
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+.nav-link {
+  margin-left: 2rem;
+  font-weight: 500;
+  color: var(--clr-text);
+  text-decoration: none;
+  position: relative;
+  padding: 1rem 0;
+}
+.nav-link.active,
+.nav-link:hover {
+  color: var(--clr-primary);
+}
+.nav-link::after {
+  content: '';
+  height: 2px;
+  background: var(--clr-accent);
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transition: width 0.3s;
+}
+.nav-link.active::after,
+.nav-link:hover::after {
+  width: 100%;
+}
+.hero {
+  position: relative;
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.hero-content {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 0 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero-title span {
+  color: var(--clr-accent);
+}
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.btn {
+  display: inline-block;
+  background: var(--clr-accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: darken(var(--clr-accent), 10%);
+}
+.content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: center;
+}
+.profile-img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.project-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.btn-small {
+  display: inline-block;
+  background: var(--clr-primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.btn-small:hover {
+  background: darken(var(--clr-primary), 10%);
+}
+.resume-embed iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--clr-muted);
+  border-radius: 4px;
+  font-family: inherit;
+}
+.contact-form button {
+  background: var(--clr-primary);
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact-form button:hover {
+  background: darken(var(--clr-primary), 10%);
+}
+.footer {
+  background: #fff;
+  padding: 1rem 0;
+}
+.footer-content p {
+  text-align: center;
+  color: var(--clr-muted);
+  font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.fade-in,
+.animate-on-scroll {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+<!-- File: js/main.js -->
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+  observer.observe(el);
+});
